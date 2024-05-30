@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu6vhijrcvdkl"]
+
+[ext_resource type="PackedScene" uid="uid://bn3ww51ynve8y" path="res://player/player.tscn" id="2_jd8h8"]
+[ext_resource type="PackedScene" uid="uid://bchk1sx4eybwr" path="res://scenary/scenary.tscn" id="3_0m4gb"]
+
+[node name="xcom" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("2_jd8h8")]
+
+[node name="Scenary" parent="." instance=ExtResource("3_0m4gb")]
