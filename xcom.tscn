@@ -6,8 +6,9 @@
 [node name="xcom" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("2_jd8h8")]
+visible = false
 
 [node name="Player2" parent="." instance=ExtResource("2_jd8h8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+visible = false
 
 [node name="Scenary" parent="." instance=ExtResource("3_0m4gb")]
