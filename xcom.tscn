@@ -7,4 +7,7 @@
 
 [node name="Player" parent="." instance=ExtResource("2_jd8h8")]
 
+[node name="Player2" parent="." instance=ExtResource("2_jd8h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
 [node name="Scenary" parent="." instance=ExtResource("3_0m4gb")]

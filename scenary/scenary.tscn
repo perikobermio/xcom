@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bchk1sx4eybwr"]
 
-[ext_resource type="Script" path="res://scenary/area.gd" id="1_538ir"]
+[ext_resource type="Script" path="res://scenary/scenary.gd" id="1_wqj3j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_av5oe"]
 albedo_color = Color(0.663747, 1, 0.547687, 1)
@@ -17,9 +17,9 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("PlaneMesh_24bh4")
 
 [node name="Area3D" type="Area3D" parent="floor"]
-script = ExtResource("1_538ir")
+script = ExtResource("1_wqj3j")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/Area3D"]
+[node name="shape" type="CollisionShape3D" parent="floor/Area3D"]
 transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 2, 0, -0.05, 0)
 shape = SubResource("BoxShape3D_bkinj")
 

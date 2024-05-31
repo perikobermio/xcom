@@ -11,7 +11,7 @@ material = SubResource("StandardMaterial3D_1x3nf")
 
 [node name="Player" type="Node3D"]
 
-[node name="Player" type="CharacterBody3D" parent="."]
+[node name="Player" type="CharacterBody3D" parent="." groups=["Player"]]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.1, 0)
 motion_mode = 1
 script = ExtResource("1_jxjwm")
@@ -21,3 +21,5 @@ mesh = SubResource("CapsuleMesh_vscgq")
 
 [node name="shape" type="CollisionShape3D" parent="Player"]
 shape = SubResource("CapsuleShape3D_sh65f")
+
+[connection signal="input_event" from="Player" to="Player" method="_on_input_event"]
