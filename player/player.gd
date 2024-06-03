@@ -16,12 +16,13 @@ func move(destiny):
 	#https://www.gotut.net/tweens-in-godot-4/
 	if selected == false: return
 	
-	destiny = Vectors.limitDistance(self.position, destiny, max_move)
-	var distance = self.position.distance_to(destiny)
+	destiny = Vectors.limitDistance(self.global_position, destiny, max_move)
+	
+	var distance = self.global_position.distance_to(destiny)
 	var duration = distance / speed
 	
 	tween = create_tween()
-	tween.tween_property(self, "position", destiny, duration)
+	tween.tween_property(self, "global_position", destiny, duration)
 
 func _on_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton and event.pressed:

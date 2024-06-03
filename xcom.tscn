@@ -1,14 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu6vhijrcvdkl"]
+[gd_scene load_steps=4 format=3 uid="uid://bx0mkqc36qcdt"]
 
-[ext_resource type="PackedScene" uid="uid://bn3ww51ynve8y" path="res://player/player.tscn" id="2_jd8h8"]
-[ext_resource type="PackedScene" uid="uid://bchk1sx4eybwr" path="res://scenary/scenary.tscn" id="3_0m4gb"]
+[ext_resource type="Script" path="res://xcom.gd" id="1_b5f3s"]
+[ext_resource type="PackedScene" uid="uid://bchk1sx4eybwr" path="res://scenary/scenary.tscn" id="2_pl5f6"]
+[ext_resource type="PackedScene" uid="uid://bn3ww51ynve8y" path="res://player/player.tscn" id="3_4mgpt"]
 
-[node name="xcom" type="Node3D"]
+[node name="Xcom" type="Node3D"]
+script = ExtResource("1_b5f3s")
 
-[node name="Player" parent="." instance=ExtResource("2_jd8h8")]
-visible = false
+[node name="Scenary" parent="." instance=ExtResource("2_pl5f6")]
 
-[node name="Player2" parent="." instance=ExtResource("2_jd8h8")]
-visible = false
+[node name="Player" parent="." instance=ExtResource("3_4mgpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, 1.6)
 
-[node name="Scenary" parent="." instance=ExtResource("3_0m4gb")]
+[node name="Player2" parent="." instance=ExtResource("3_4mgpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6, 0, -1.6)

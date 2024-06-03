@@ -1,17 +1,10 @@
 extends Area3D
 
-var tscn_xcom 	= preload("res://xcom.tscn")
-var tscn_player = preload("res://player/player.tscn")
-
 func _ready():
 	initialize()
 
 func initialize():
-	var _player = tscn_player.instantiate()
-	var _xcom = tscn_xcom.instantiate()
-	#_player.position = Vector3(-1.6, _player.position.y, 1.6)
-	_xcom.add_child(_player)
-	
+	pass
 	#player = get_tree().root.get_node("/root/xcom/Player/Player")
 	#player2 = get_tree().root.get_node("/root/xcom/Player2/Player")
 	

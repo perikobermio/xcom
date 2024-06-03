@@ -10,5 +10,4 @@ static func limitDistance(origin: Vector3, destiny: Vector3, max_move: float) ->
 	if distance > max_move:
 		destiny = (destiny - origin).normalized()
 		destiny = origin + destiny * max_move
-		
 	return destiny
